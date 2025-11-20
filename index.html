@@ -7,7 +7,38 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <div class="container">
+    <h1>🪨 📄 ✂️</h1>
+    <p style="font-size: 1.2rem; color: #7f8c8d;">Choose your weapon!</p>
+    
+    <div class="choices">
+      <button class="choice-btn" data-choice="rock">🪨</button>
+      <button class="choice-btn" data-choice="paper">📄</button>
+      <button class="choice-btn" data-choice="scissors">✂️</button>
+    </div>
+
+    <div class="results">
+      <p>You chose: <strong id="player-choice">-</strong></p>
+      <p>Computer chose: <strong id="computer-choice">-</strong></p>
+      
+      <div id="result-message" class="result-message" style="display: none;">
+        Result will appear here
+      </div>
+    </div>
+
+    <div class="score">
+      <div class="score-item">
+        <div>You</div>
+        <div class="score-value" id="player-score">0</div>
+      </div>
+      <div class="score-item">
+        <div>Computer</div>
+        <div class="score-value" id="computer-score">0</div>
+      </div>
+    </div>
+
+    <button class="reset" id="reset">Reset Game</button>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
