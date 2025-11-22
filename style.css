@@ -55,3 +55,42 @@ h1{
   padding: 15px;
   border-radius: 10px;
 }
+
+.win {
+  background: #d5f4e6;
+  color: #27ae60;
+}
+.lose{
+  background-color: #fadbd8;
+  color: #e74c3c;
+}
+.draw{
+  background-color: #fff3cd;
+  color: #f39c12;
+}
+.score{
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2rem;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f1f6fb; 
+  border-radius: 10px;
+}
+.score-value{
+  font-weight: 600;
+  color: #667eea;
+  margin-top: 5px;
+}
+button.reset{
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  background-color: #dcebfa;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button.reset:hover{
+  border: 2px solid rgb(69, 69, 247);
+}
