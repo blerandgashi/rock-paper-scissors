@@ -20,16 +20,16 @@ rockPaperScissorsBtns.forEach(btns => {
 
     // Computer part
     let randomNumber = Math.floor(Math.random() * rockPaperScissorsArr.length);
-    const comupterChoices = rockPaperScissorsArr[randomNumber];
-    computerChoiceEl.textContent = comupterChoices;
+    const computerChoices = rockPaperScissorsArr[randomNumber];
+    computerChoiceEl.textContent = computerChoices;
 
     if (rpsHuman === comupterChoices) {
       humanScore;
       computerScore;
     }else if (
-      rpsHuman === 'rock' && comupterChoices === 'scissors' ||
-      rpsHuman === 'paper' && comupterChoices === 'rock' ||
-      rpsHuman === 'scissors' && comupterChoices === 'paper'
+      rpsHuman === 'rock' && computerChoices === 'scissors' ||
+      rpsHuman === 'paper' && computerChoices === 'rock' ||
+      rpsHuman === 'scissors' && computerChoices === 'paper'
     ) {
       humanScore++;
     }else{
@@ -67,12 +67,14 @@ function getWinner(){
 document.querySelector("#reset").addEventListener("click", function(){
   rockPaperScissorsBtns.forEach(btns => btns.disabled = false);
   
-  playerChoice.textContent = "";
-  computerChoiceEl.textContent = "";
+  playerChoice.textContent = "-";
+  computerChoiceEl.textContent = "-";
   
   humanScore = 0;
   computerScore = 0;
 
   playerScoreEl.textContent = "0";
   computerScoreEl.textContent = "0";
+
+  resultMsg.style.display = "none"
 })
